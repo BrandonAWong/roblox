@@ -27,15 +27,17 @@ def openBackpack():
     pydirectinput.moveTo(971, 971)
     pydirectinput.click(x=970, y=970)
 
-def switchPets(x1, y1, x2, y2):
+def switchPets(x, y):
     openBackpack()
     pydirectinput.moveTo(771, 681)
     pydirectinput.click(x=770, y=680)
-    pydirectinput.moveTo(x1+1, y1+1)
-    pydirectinput.click(x=x1, y=y1)
-    pydirectinput.moveTo(x2+1, y2+1)
-    pydirectinput.click(x=x2, y=y2)
-
+    pydirectinput.moveTo(x+1, y+1)
+    pydirectinput.click(x=x, y=y)
+    pydirectinput.moveTo(x+100, y+100)
+    pydirectinput.click(x=x+100, y=y+100)
+    pydirectinput.moveTo(971, 971)
+    pydirectinput.click(x=970, y=970)
+    pydirectinput.PAUSE = 0.15
 
 def teleport(page, x, y):
     openBackpack()
@@ -74,6 +76,7 @@ def thirsty():
     moveUp(2)
     sleep(2)
     moveLeft(0.65)
+    sleep(2)
     moveUp(0.3)
     interact1()
     moveLeft(1.5)
@@ -88,6 +91,7 @@ def hungry():
     moveUp(2)
     sleep(2)
     moveLeft(0.5)
+    sleep(2)
     moveUp(0.3)
     interact1()
     moveDown(0.3)
@@ -109,11 +113,10 @@ def bed():
     sleep(18)
 
 def shower():
-    moveUp(0.3)
-    moveLeft(0.7)
-    sleep(2)
-    interact2()
     moveUp(0.5)
+    moveRight(0.5)
+    interact2()
+    moveUp(0.2)
     interact1()
     sleep(9)
 
@@ -155,7 +158,7 @@ def camping():
     moveUp(2.5)
     moveRight(15)
     moveUp(2)
-    moveRight(8.5)
+    moveRight(9)
     moveDown(9)
     sleep(60)
 
