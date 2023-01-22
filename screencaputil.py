@@ -46,11 +46,11 @@ def getTask():
     while True:
         taskOnScreen = getTaskOnScreen(925, 90, 990, 160)
         task, error = calculatErrorValues(taskOnScreen, 'referenceTasks')
-        if error < 10:
+        if error < 1:
             break
         taskOnScreen = getTaskOnScreen(891, 90, 956, 160)
         task, error = calculatErrorValues(taskOnScreen, 'referenceTasks')
-        if error < 10:
+        if error < 1:
             break
         sleep(5)
     print(task)
